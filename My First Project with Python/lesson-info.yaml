@@ -1,0 +1,6 @@
+type: framework
+content:
+  - Print the prices
+  - Measure total income of your shop
+  - Calculate net income
+current_task: 2
