@@ -96,6 +96,16 @@ files:
       
       if __name__ == '__main__':    PrintFirstProject().run_tests()
     learner_created: false
+  - name: 1st project code.py
+    visible: true
+    learner_created: true
+  - name: 1st project ai code.py
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/28248#comment
-status: Failed
+status: Unchecked
+feedback:
+  message: "No tests have run. For more information, see <a href=\"https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/troubleshooting-guide.html#no_tests_have_run\"\
+    >the Troubleshooting guide</a>"
+  time: "Fri, 08 Mar 2024 12:14:26 UTC"
 record: 3

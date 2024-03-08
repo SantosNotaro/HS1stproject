@@ -1,30 +1,35 @@
-# Earned Amount
-bubblegum = float(input("Bubblegum: ").replace('$', '').replace(',', ''))
-toffee = float(input("Toffee: ").replace('$', '').replace(',', ''))
-icecream = float(input("Ice Cream: ").replace('$', '').replace(',', ''))
-milkchocolate = float(input("Milk Chocolate: ").replace('$', '').replace(',', ''))
-doughnut = float(input("Doughnut: ").replace('$', '').replace(',', ''))
-pancake = float(input("Pancake: ").replace('$', '').replace(',', ''))
+# Function to calculate net income
+def calculate_net_income(income, staff_expenses, other_expenses):
+    return income - staff_expenses - other_expenses
 
-# Expenses
-staffexpenses = float(input("How much are staff expenses?: ").replace('$', '').replace(',', ''))
-otherexpenses = float(input("How much are other expenses?: ").replace('$', '').replace(',', ''))
+# Item names and corresponding earnings
+items = {
+    "Bubblegum": 202,
+    "Toffee": 118,
+    "Ice cream": 2250,
+    "Milk chocolate": 1680,
+    "Doughnut": 1075,
+    "Pancake": 80
+}
 
-# Net Income
-income = bubblegum + toffee + icecream + milkchocolate + doughnut + pancake
-net_income = income - staffexpenses - otherexpenses
+# Calculate total income
+total_income = sum(items.values())
 
-# print
-print()
-print("Earned Amount: ")
-print("Bubblegum: $", bubblegum)
-print("Toffee: $", toffee)
-print("Ice Cream: $", icecream)
-print("Milk Chocolate: $", milkchocolate)
-print("Doughnut: $", doughnut)
-print("Pancake: $", pancake)
-print()
-print("Income: $", income)
-print("Staff Expenses: $", staffexpenses)
-print("Other Expenses: $", otherexpenses)
-print("Your Net Income: $", net_income)
+# Print earned amount for each item
+print("Earned amount:")
+for item, amount in items.items():
+    print(f"{item}: ${amount}")
+
+# Print total income
+print("\nIncome:", f"${total_income}")
+
+# Ask for staff expenses
+staff_expenses = int(input("Staff expenses: "))
+
+# Ask for other expenses
+other_expenses = int(input("Other expenses: "))
+
+# Calculate and print net income
+net_income = calculate_net_income(total_income, staff_expenses, other_expenses)
+print("Net income:", f"${net_income}")
+
